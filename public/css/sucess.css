@@ -1,0 +1,169 @@
+/* ----------------- page & body styling ----------------- */
+
+body {
+    margin: 0;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------- bg styling ----------------- */
+
+
+#bgimage {
+    position: absolute;
+    background: url(../../public/pics/headers/IMG_1666.jpg) no-repeat 100% 60% / 110%;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wave {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+
+/* ----------------- content styling ----------------- */
+
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-family: 'bebas';
+}
+
+.thank-you-gif {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+.home-link {
+    text-transform: lowercase;
+    display: inline-block;
+    margin-top: 20px;
+    color: #000000;
+    font: 100 1.2em 'harmonia';
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+/* ----------------- popup styling ----------------- */
+
+.popup {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup p {
+    font-family: 'harmonia';
+    margin: 15px 10px;
+    font-size: 14px;
+}
+
+.popup h2 {
+    font: 600 20px 'bebas';
+    color: #0e291a;
+    letter-spacing: 0.5px;
+}
+
+.popup span {
+    font-family: 'bebas';
+    font-weight: 600;
+    color: #0e291a;
+    letter-spacing: 0.5px;
+}
+
+.promo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.promo img {
+    width: 35px;
+}
+
+/* ----------------- popup button styling ----------------- */
+
+.input-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    overflow: hidden;
+    height: 70px;
+}
+
+input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    font-family: 'harmonia';
+}
+
+.popup button {
+    background-color: #61376180;
+    color: white;
+    border: none;
+    width: 90px;
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+    font-family: 'bebas';
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    height: 40px;
+}
+
+button:hover {
+    background-color: #06120b;
+}
+
+/* ----------------- popup button styling ----------------- */
+
+@media only screen and (min-device-width: 1025px) {
+
+    #bgimage {
+        height: 20vh;
+    }
+
+    .thank-you-gif {
+        width: 20%;
+        max-width: 400px;
+    }
+
+}
