@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="https://sonderbeads.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonder Beads</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="/public/css/universal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://js.stripe.com/v3/" defer></script>
+</head>
+
+<body>
+    <!----------------- bdy container to prevent overflow ----------------->
+    <div id="bdy">
+        <!------------------ background image (desktop only) --------------------->
+        <div id="bgimage" class="splide">
+            <div class="splide__slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <!-- <li class="splide__slide"><img src="/public/pics/headers/IMG_9654.jpg" alt=""></li> -->
+                        <li class="splide__slide"><img src="/public/pics/headers/IMG_9656.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="/public/pics/headers/IMG_9657.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="/public/pics/headers/IMG_9658.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="splide__toggle" type="button">
+                <span class="splide__toggle__play"><img src="/public/pics/icons/icons8-play-64.png" alt=""></span>
+                <span class="splide__toggle__pause"><img src="/public/pics/icons/icons8-pause-50.png" alt=""></span>
+            </button>
+        </div>
+        <!------------------ nav section --------------------->
+        <!--------------- sticky nav section --------------->
+        <div id="nav-carousel" class="splide">
+            <div class="splide__slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <h6>Sonder Beads is Now Open</h6>
+                        </li>
+                        <li class="splide__slide">
+                            <h6>Sonder Beads is Now Open</h6>
+                        </li>
+                        <li class="splide__slide">
+                            <h6>Sonder Beads is Now Open</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="splide__toggle" type="button">
+                <span class="splide__toggle__play"><img src="/public/pics/icons/icons8-play-64.png" alt=""></span>
+                <span class="splide__toggle__pause"><img src="/public/pics/icons/icons8-pause-50.png" alt=""></span>
+            </button>
+        </div>
+        <!-------------------- actual nav section -------------------------->
+        <div id="nav-placeholder"></div>
+        <nav id="navbar">
+            <ul>
+                <li class="logo">
+                    <h1><a href="index.html">sonder beads</a></h1>
+                </li>
+                <li class="navicons">
+                    <div class="cart-icon-container">
+                        <a href="javascript:void(0);" id="order-icon">
+                            <img src="/public/pics/icons/icons8-cart-48.png" alt="order list"> <span></span>
+                        </a>
+                    </div>
+                </li>
+                <li class="navicons dropdown">
+                    <a href="javascript:void(0);" id="menu-icon"><img src="/public/pics/icons/icons8-lines-48.png"
+                            alt="dropdown nav"></a>
+                </li>
+            </ul>
+            <!----------------- desktop nav list ----------------->
+            <ul class="desktop">
+                <li><a href="index.html">home</a></li>
+                <li><a href="/public/html/categories/waist.html">waistbeads</a></li>
+                <li><a href="/public/html/categories/bracelet.html">bracelets</a></li>
+                <li><a href="/public/html/categories/earrings.html">earrings</a></li>
+                <li><a href="#history">history</a></li>
+                <li><a href="public/html/other/contact.html">contact & policies</a></li>
+            </ul>
+        </nav> <!------------------ popup email list --------------------->
+        <div id="popup" class="popup" autocomplete="given-name">
+            <div class="popup-content">
+                <img class="close-button" id="close-button" src="/public/pics/icons/icons8-x-50.png" alt="">
+                <div class="promo">
+                    <img src="/public/pics/icons/icons8-hibiscus-64.png" alt="Hibiscus Icon">
+                    <h2>Unlock 10% Off</h2>
+                </div>
+                <p>Join our email list to receive a discount code!</p>
+                <form name="submit-to-google-sheet" class="input-button-container">
+                    <input type="email" name="Email" placeholder="Enter your email" required>
+                    <button type="submit">Join Now</button>
+                </form>
+            </div>
+        </div>
+        <!----------------- popout navigation BAR (mobile and ipad) ----------------->
+        <div id="popout-menu" class="popout-menu">
+            <ul>
+                <li><a href="/index.html">Home</a><span id="close-menu"><img src="/public/pics/icons/icons8-x-50.png"
+                            alt=""></span></li>
+                <li><a href="/public/html/categories/waist.html">waistbeads</a></li>
+                <li><a href="/public/html/categories/bracelet.html">bracelet</a></li>
+                <li><a href="public/html/categories/earrings.html">earrings</a></li>
+                <li><a href="#history">history</a></li>
+                <li><a href="public/html/other/success.html">ss</a></li>
+                <li><a href="public/html/other/contact.html">contact & Policies</a></li>
+            </ul>
+        </div>
+        <!----------------- popout cart ----------------->
+        <div id="popout-cart" class="popout-cart">
+            <div class="cart-header">
+                <h3>shopping cart <span><button id="close-cart">close</button> </span></h3>
+            </div>
+            <div class="carttab">
+            </div>
+            <hr class="thin-grey-line">
+            <div class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="totalamt">
+                    <h2>Subtotal</h2>
+                    <h4 id="cart-total">$0.00 USD</h4>
+                </div>
+                <p>Shipping & taxes calculated at checkout
+                </p>
+                <div class="cartbtn">
+                    <form action="/create-checkout-session" method="POST">
+                        <button type="submit" class="checkout" id="checkout-button">checkout!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!----------------- overlay to make background dimmed after nav pops out ----------------->
+        <div id="overlay" class="overlay"></div>
+        <!----------------- landing page text ----------------->
+        <div id="main">
+            <h1>Sonder Beads</h1>
+            <h2>Handmade treasures for the soul</h2>
+            <a href="#jewelry-container"><button>SHOP NOW</button></a>
+        </div>
+        <!----------------- jewelry section ----------------->
+        <div id="jewelry-container" data-aos="fade-in" data-aos-duration="1000">
+            <div id="jewelry-carousel" class="splide" aria-label="Jewelry Carousel">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="category">
+                                <a href="/public/html/categories/waist.html">
+                                    <img src="/public/pics/waistbeads/custom-wb/jwaistbead.jpg" alt="Waistbead Cover"
+                                        class="pop-effect">
+                                    <span>waistbeads</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="category">
+                                <a href="/public/html/categories/bracelet.html">
+                                    <img src="/public/pics/headers/jbracelets.jpg" alt="Bracelet Cover"
+                                        class="pop-effect">
+                                    <span>bracelets</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="category">
+                                <a href="/public/html/categories/earrings.html">
+                                    <img src="/public/pics/earrings/dangle/amethyst/purplecrystalearrings2.JPG"
+                                        alt="Rings Cover" class="pop-effect">
+                                    <span>Earrings</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="jewelry-slider-container">
+                    <div id="jewelry-slider"></div>
+                </div>
+            </div>
+        </div>
+        <!----------------- slogan for desktop text ----------------->
+        <div id="desktop-slogan" class="slg" data-aos="fade-in" data-aos-duration="1000">
+            <h4>body adornments for all shapes and sizes made with LOVE</h4>
+            <p>Sonder — the understanding that every person's story is as complex and significant as your own.
+                At
+                Sonder
+                Beads, we embrace this philosophy through our unique designs that cherish creativity and
+                community.
+                Explore our collection to find jewelry that reflects the unique beauty of each soul.</p>
+        </div>
+        <!----------------- new arrivals section ----------------->
+        <div id="newarrivals" data-aos="fade-in" data-aos-duration="400">
+            <h2>NEW ARRIVALS</h2>
+            <div id="splide-arrivals" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide" class="product">
+                            <a href="/public/html/products/waistbeads/both-wb/custom-wb.html">
+                                <img src="/public/pics/waistbeads/custom-wb/7F63764B-D58B-4FDB-8662-D027F3F157CF.jpg"
+                                    alt='verdant harmony Waistbead'>
+                                <p>verdant harmony custom Waistbead</p>
+                                <h4>$7.99</h4>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="/public/html/products/bracelets/crystal-bracelets/amethyst-crystal.html">
+                                <img src="/public/pics/bracelets/crystal-bracelets/amethyst/IMG_1969.jpg"
+                                    alt="Amethyst Crystal Bracelet">
+                                <p>Amethyst Crystal Bracelet</p>
+                                <h4>$4.99</h4>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="/public/html/products/waistbeads/both-wb/custom-wb.html">
+                                <img src="/public/pics/waistbeads/custom-wb/pinkwlwwaistbead.jpg"
+                                    alt="WLW Custom Waistbead">
+                                <p>WLW Custom Waistbead</p>
+                                <h4>$6.99</h4>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="/public/html/products/waistbeads/stock-wb/rainbow-quartz.html">
+                                <img src="/public/pics/waistbeads/stock-wb/rainbow-quartz/IMG_1691.jpg"
+                                    alt="Rainbow Quartz Waistbead">
+                                <p>Rainbow Quartz Waistbead</p>
+                                <h4>$8.00</h4>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="/public/html/products/waistbeads/both-wb/custom-wb.html">
+                                <img src="/public/pics/waistbeads/custom-wb/IMG_0245.jpg"
+                                    alt="Black Rutilated Custom Crystal Waistbead">
+                                <p>Black Rutilated Custom Crystal Waistbead</p>
+                                <h4>$4.99</h4>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="/public/html/products/bracelets/gemstone-bracelets/sodalite.html">
+                                <img src="/public/pics/bracelets/gemstone-bracelets/sodalite/IMG_1877.jpg"
+                                    alt="white marble bracelet">
+                                <p>Sodalite Gemstone Bracelet</p>
+                                <h4>$8.00</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!----------------- highlighted items section ----------------->
+        <div id="highlighted">
+            <div class="topcurve2">
+                <svg data-name="Layer 1" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="himg-container">
+                <img src="/public/pics/headers/IMG_2075.jpg" data-aos="fade-in" data-aos-duration="1000"
+                    alt="highlighted image">
+            </div>
+            <a href="#jewelry"><button>SHOP GEMSTONE BRACELETS</button></a>
+            <div id="splide-highlighted" class="splide" data-aos="fade-in" data-aos-duration="1000">
+                <h2>Handpicked Stones for Every Style</h2>
+                <h3>Crafted with care, tailored for you.</h3>
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide" class="product">
+                            <a href="/public/html/products/bracelets/gemstone-bracelets/rainforest-agate.html">
+                                <img src="/public/pics/bracelets/gemstone-bracelets/ocean-agate/IMG_1889.jpg"
+                                    alt="Ocean Agate Gemstone Bracelet">
+                                <p>Ocean Agate Gemstone Bracelet</p>
+                                <h4>$4.99</h4>
+                            </a>
+                        </li>
+                        <li class="splide__slide" class="product">
+                            <a href="/public/html/products/bracelets/gemstone-bracelets/tigers-eye.html">
+                                <img src="/public/pics/bracelets/gemstone-bracelets/tigers-eye/IMG_1870.jpg"
+                                    alt="Tigers Eye Gemstone Bracelet">
+                                <p>Tigers Eye Gemstone Bracelet</p>
+                                <h4>$4.99</h4>
+                            </a>
+                        </li>
+                        <li class="splide__slide" class="product">
+                            <a href="/public/html/products/bracelets/gemstone-bracelets/rainforest-agate.html">
+                                <img src="/public/pics/bracelets/gemstone-bracelets/sodalite/IMG_1877.jpg"
+                                    alt="Rainforest Agate Gemstone Bracelet">
+                                <p>Sodalite Gemstone Bracelet</p>
+                                <h4>$4.99</h4>
+                            </a>
+                        </li>
+                        <li class="splide__slide" class="product">
+                            <a href="/public/html/products/bracelets/gemstone-bracelets/rhodochrosite.html">
+                                <img src="/public/pics/bracelets/gemstone-bracelets/rhodochrosite/IMG_1904.jpg"
+                                    alt="Rhodochrosite Gemstone Bracelet">
+                                <p>Rhodochrosite Gemstone Bracelet</p>
+                                <h4>$4.99</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btmcurve2">
+                <svg data-name="Layer 1" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="btmcurve2-1">
+                <svg data-name="Layer 1" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+        </div>
+        <!----------------- featured items section ----------------->
+        <div id="featured" data-aos="fade-in" data-aos-duration="400">
+            <h2>FEATURED</h2>
+            <div id="splide-featured" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide" class="product">
+                            <a href="/public/html/products/waistbeads/both-wb/custom-wb.html">
+                                <img src="/public/pics/waistbeads/custom-wb/IMG_2733.jpg"
+                                    alt="Pink Aura Custom Waistbead">
+                                <p>Pink Aura Custom Waistbead</p>
+                                <h4>$4.99</h4>
+                            </a>
+                        </li>
+                        <li class="splide__slide" class="product">
+                            <a href="/public/html/products/waistbeads/both-wb/custom-wb.html">
+                                <img src="/public/pics/waistbeads/custom-wb/earthtonecrystalwaistbead.JPEG"
+                                    alt="Indian Agate Custom Crystal Waistbead">
+                                <p>Indian Agate Custom Crystal Waistbead</p>
+                                <h4>$4.99</h4>
+                            </a>
+                        </li>
+                        <li class="splide__slide" class="product">
+                            <a href="/public/html/products/bracelets/tube-bracelets/tube-bracs.html">
+                                <img src="/public/pics/bracelets/tube-bracelets/IMG_1922.jpg" alt="Tube Bracelets">
+                                <p>Tube Bracelets</p>
+                                <h4>$4.99</h4>
+                            </a>
+                        </li>
+                        <li class="splide__slide" class="product">
+                            <a href="/public/html/products/waistbeads/both-wb/custom-wb.html">
+                                <img src="/public/pics/waistbeads/single-color-wb/single-color-waistbead/IMG_2734.jpg"
+                                    alt="Verdant Harmony Beaded Waistbead">
+                                <p>Verdant Harmony Custom Beaded Waistbead</p>
+                                <h4>$6.99</h4>
+                            </a>
+                        </li>
+                        <li class="splide__slide" class="product">
+                            <a href="/public/html/products/bracelets/crystal-bracelets/moss-agate.html">
+                                <img src="/public/pics/bracelets/crystal-bracelets/moss-agate/IMG_1961.jpg"
+                                    alt="Moss Agate Crystal Bracelet">
+                                <p>Moss Agate Crystal Bracelet</p>
+                                <h4>$4.99</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="featured-slider-container">
+                    <div id="featured-slider"></div>
+                </div>
+            </div>
+        </div>
+        <!----------------- history section ----------------->
+        <div id="history" data-aos="fade-in" data-aos-duration="1000">
+            <div class="history-container">
+                <img src="/public/pics/headers/IMG_2598 (1).jpg" alt="Waistbeads Image 1" class="img1">
+                <img src="/public/pics/headers/multiplewaistbeads copy.JPEG" alt="Waistbeads Image 2" class="img2">
+            </div>
+            <div class="history-text-container">
+                <h2>History of Waistbeads</h2>
+                <p>Waist beads originated in Africa and trace back to 15th century Egypt when they were referred to
+                    as
+                    "girdles." Today, these beads hold cultural significance across the African continent and the
+                    broader black diaspora. Women from countries such as Ivory Coast, America, Senegal, Ghana,
+                    Jamaica,
+                    and beyond adorn themselves with waist beads, embodying ideals of beauty, sexuality, and
+                    fertility.
+                </p>
+            </div>
+        </div>
+        <!---------------- video section -------------------->
+        <div id="video">
+            <div class="video-container">
+                <video width="100%" height="650px" autoplay muted loop>
+                    <source src="/public/pics/headers/8e3c28e64e12472599eb61fa04fed8f2.mp4" type="video/mp4">
+                    your browser doesn't support the video tag
+                </video>
+            </div>
+        </div>
+        <!----------------- slogan for mobile ----------------->
+        <div id="mobile-slogan" class="slg" data-aos="fade-in" data-aos-duration="1200">
+            <p>body adornments for all shapes and sizes made with LOVE</p>
+        </div>
+        <!----------------- reviews section ----------------->
+        <div id="reviews" data-aos="fade-in" data-aos-duration="1200">
+            <hr class="thin-grey-line">
+            <h2>What Our Customers Say</h2>
+            <section id="splide-reviews" class="splide" aria-label="carousel-heading">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="/public/pics/icons/icons8-hibiscus-64.png" alt="">
+                                    <h2>Perfect for Layering</h2>
+                                </div>
+                                <p>These waist beads are perfect for layering. I bought a few different colors, and they
+                                    look great together. They're also really lightweight, which makes them comfortable
+                                    to wear all day.</p>
+                                <ul class="stars">
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="/public/pics/icons/icons8-hibiscus-64.png" alt="">
+                                    <h2>Charm Customization</h2>
+                                </div>
+                                <p>I love the charm detail on my waist beads! It adds a unique touch that makes them
+                                    stand out. They're also really easy to adjust.</p>
+                                <ul class="stars">
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="/public/pics/icons/icons8-hibiscus-64.png" alt="">
+                                    <h2>Versatile Styling</h2>
+                                </div>
+                                <p>I was pleasantly surprised by how versatile these bracelets are. I can wear them with
+                                    casual or dressy outfits, and they always add a nice touch. Great value for the
+                                    price!</p>
+                                <ul class="stars">
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="/public/pics/icons/icons8-hibiscus-64.png" alt="">
+                                    <h2>Beautiful Protection</h2>
+                                </div>
+                                <p>I've been looking for evil eye jewelry, and these waist beads are exactly what I
+                                    wanted. They're beautiful, and I feel protected every time I wear them.</p>
+                                <ul class="stars">
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                    <li><img src="/public/pics/icons/icons8-star-48.png" alt=""></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!------------------------- footer section ------------------------->
+        <footer class="footer-distributed">
+            <hr class="thin-grey-line">
+            <div class="footer-left">
+                <h3>Sonder Beads </h3>
+                <p class="footer-links">
+                    <a href="./index.html">Home</a>
+                    |
+                    <a href="/public/html/contact.html">Contact</a>
+                    |
+                    <a href="/public/html/contact.html">Policies</a>
+                </p>
+                <p class="footer-company-name">Copyright © 2022 <span class="logo-bold">SonderBeads</span> All
+                    rights
+                    reserved
+                </p>
+            </div>
+            <div class="footer-center">
+                <div>
+                    <img src="/public/pics/icons/icons8-mail-48.png" alt="mail icon">
+                    <p><span>Sonder Beads</span>
+                        Contact Us</p>
+                </div>
+                <div>
+                    <img src="/public/pics/icons/icons8-gmail-48.png" alt="mail icon">
+                    <p><a href="mailto:sonderbeads.co@gmail.com">sonderbeadsco@gmail.com</a></p>
+                </div>
+                <div>
+                    <img src="/public/pics/icons/icons8-instagram-48.png" alt="insta icon">
+                    <p>@sonderbeads </p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p class="footer-company-about">
+                    <span class="company-about">About the company</span>
+                    <span class="logo-bold">Sonder Beads</span> Sonder — the understanding that every person's story
+                    is
+                    as
+                    complex and
+                    significant as your own. At
+                    Sonder
+                    Beads, we embrace this philosophy through our unique designs that cherish creativity and
+                    community.
+                </p>
+            </div>
+        </footer>
+    </div>
+    <!------------------------- js ------------------------->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            //landing carousel
+            var landingSplide = new Splide('#bgimage', {
+                type: 'loop',
+                autoplay: 'play',
+                perPage: 1,
+                arrows: false,
+            });
+            landingSplide.mount();
+
+            //nav carousel
+            var navSplide = new Splide('#nav-carousel', {
+                type: 'loop',
+                autoplay: 'play',
+                arrows: false,
+                pagination: false,
+            });
+            navSplide.mount();
+
+            // jewelry carousel
+            var jewelrySplide = new Splide('#jewelry-carousel', {
+                arrows: false,
+                pagination: false,
+                type: 'loop',
+                mediaQuery: 'min',
+                breakpoints: {
+                    1024: {
+                        destroy: true,
+                    },
+                }
+            });
+
+            var bar = jewelrySplide.root.querySelector('#jewelry-slider');
+
+            jewelrySplide.on('mounted move', function () {
+                var end = jewelrySplide.Components.Controller.getEnd() + 1;
+                var rate = Math.min((jewelrySplide.index + 1) / end, 1);
+                bar.style.width = String(100 * rate) + '%';
+            });
+            jewelrySplide.mount();
+
+
+            // Initialize the highlighted carousel
+            var splideHighlighted = new Splide('#splide-highlighted', {
+                type: 'loop',
+                perPage: 2,
+                perMove: 1,
+                breakpoints: {
+                    1024: {
+                        perPage: 1,
+                    },
+                }
+            });
+            splideHighlighted.mount();
+
+            // Initialize the new arrivals carousel
+            var splideArrivals = new Splide('#splide-arrivals', {
+                type: 'loop',
+                perPage: 3,
+                perMove: 1,
+                breakpoints: {
+                    1024: {
+                        perPage: 3,
+                    },
+                }
+            });
+
+            var bar2 = splideArrivals.root.querySelector('#newarrivals-slider');
+
+            splideArrivals.on('mounted move', function () {
+                var end = splideArrivals.Components.Controller.getEnd() + 1;
+                var rate = Math.min((splideArrivals.index + 1) / end, 1);
+                bar2.style.width = String(100 * rate) + '%';
+            });
+
+            splideArrivals.mount();
+
+            // Initialize the featured carousel
+            var splideFeatured = new Splide('#splide-featured', {
+                type: 'loop',
+                perPage: 3,
+                perMove: 1,
+                breakpoints: {
+                    1024: {
+                        perPage: 3,
+                    },
+                }
+            });
+
+            var bar3 = splideFeatured.root.querySelector('#featured-slider');
+
+            splideFeatured.on('mounted move', function () {
+                var end = splideFeatured.Components.Controller.getEnd() + 1;
+                var rate = Math.min((splideFeatured.index + 1) / end, 1);
+                bar3.style.width = String(100 * rate) + '%';
+            });
+
+            splideFeatured.mount();
+
+
+            // Initialize the reviews carousel
+            var splideReviews = new Splide('#splide-reviews', {
+                type: 'loop',
+            });
+            splideReviews.mount();
+        });
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwV00AtZq3vaTZWJXJSc3AjXWklqKtJqJWXDsnSK7bZ9MtyV1PTaVOVChNAUuM88xSM/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const button = form.querySelector('button'); // Select the button element
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            button.textContent = "Submitting..."; // Change button text to indicate submission in progress
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    button.textContent = "Thank you!"; // Change button text to "Thank you!" after successful submission
+                    form.reset(); // Clear the form fields
+
+                    setTimeout(() => {
+                        button.textContent = "Join Now"; // Revert button text back after 5 seconds
+                    }, 5000);
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    button.textContent = "Try Again"; // Optional: Change button text to "Try Again" if an error occurs
+                });
+        });
+    </script>
+    <script src="/public/js/bundle.js"></script>
+    <script src="/public/js/cart.js"></script>
+    <script src="/public/js/index.js"></script>
+</body>
+
+</html>

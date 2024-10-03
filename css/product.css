@@ -1,0 +1,166 @@
+/* ----------------- page & body styling ----------------- */
+
+.header {
+    position: relative;
+    text-align: center;
+}
+
+.animate__animated.animate__fadeInUp {
+    --animate-duration: 200ms;
+}
+
+/* ----------------- background image styling ----------------- */
+
+#bgimage {
+    position: absolute;
+    background-image: url('../pics/headers/IMG_1865.jpg');
+    background-size: 110%;
+    background-position: center 60%;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#wave {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* ----------------- filter and sortstyling ----------------- */
+
+#filter-sort {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 0 -20px;
+}
+
+#filter-sort select {
+    font: 100 0.85rem 'bebas';
+    margin: 10px 10px 0;
+    color: rgb(0, 0, 0);
+    padding: 6px 10px;
+    cursor: pointer;
+    border: none;
+    width: 42vw;
+    height: 4vh;
+    border-radius: 10px;
+}
+
+#filter-button:focus+#dropdown,
+#dropdown:hover {
+    display: block;
+}
+
+/* ----------------- product list ----------------- */
+
+#waistbeads {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.product-row {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product {
+    margin: 10px 0px;
+    text-align: center;
+    padding: 5px;
+}
+
+/* ----------------- product row text styling ----------------- */
+
+.product a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Bebas';
+    text-align: left;
+}
+
+.product h4 {
+    font: 100 0.9rem 'Bebas';
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+
+.product p {
+    letter-spacing: 0.35px;
+    margin: 10px 5px;
+    font: 100 0.0.95rem 'Bebas';
+}
+
+.product img {
+    border-radius: 5px;
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+}
+
+/* ----------------- media queries ----------------- */
+
+/* ----------------- ipad ----------------- */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .product-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product img {
+        width: 100%;
+        height: 28vh;
+    }
+
+    #dropdown {
+        transform: translateY(85%);
+    }
+}
+
+/* ----------------- desktop ----------------- */
+
+@media only screen and (min-device-width: 1025px) {
+    #bgimage {
+        height: 18vh;
+        background-size: cover;
+    }
+
+    #filter-sort {
+        margin: 5% 0 0 0;
+    }
+
+    #filter-sort select {
+        width: auto;
+        height: 5vh;
+    }
+
+    #waistbeads {
+        margin-top: 10px;
+    }
+
+    .header-text h1 a {
+        top: 60%;
+    }
+
+    .product-row {
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 30px;
+    }
+
+    .product img {
+        width: 100%;
+        height: 45vh;
+    }
+
+    #dropdown {
+        transform: translateY(87%);
+    }
+}
